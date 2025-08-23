@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Interaction Checklist</title>
+  <link rel="stylesheet" href="styles/house-layout.css">
+  <script src="scripts/house.js" defer></script>
+</head>
+<body>
+  <h1>Customer Interaction Checklist</h1>
+  <div class="checklist">
+    <label><input type="checkbox" onchange="updateHouse()"> Greet the customer warmly</label>
+    <label><input type="checkbox" onchange="updateHouse()"> Ask about their needs</label>
+    <label><input type="checkbox" onchange="updateHouse()"> Provide a solution</label>
+    <label><input type="checkbox" onchange="updateHouse()"> Confirm understanding</label>
+    <label><input type="checkbox" onchange="updateHouse()"> Thank the customer</label>
+  </div>
+
+  <div class="house">
+    <div class="foundation"></div>
+    <div class="walls"></div>
+    <div class="roof"></div>
+    <div class="door"></div>
+    <div class="window left"></div>
+    <div class="window right"></div>
+  </div>
+</body>
+</html>
