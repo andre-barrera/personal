@@ -1,19 +1,24 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  background-image: url('../images/12439c03-31d6-4fbf-a566-ad1c87a2955c.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
 }
 
-h1 { color: #333; }
+h1 { 
+  color: white; 
+}
 
 .container{
-    max-width: 95%;
-    margin: 0 auto;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .checklist {
-  background: #fff;
+  background-color: rgba(255,255,255,0.4);
   display: inline-block;
   padding: 20px;
   border-radius: 12px;
@@ -26,6 +31,7 @@ h1 { color: #333; }
   display: block;
   margin: 8px 0;
   font-size: 16px;
+  color: white;
   cursor: pointer;
 }
 
@@ -37,7 +43,6 @@ h1 { color: #333; }
   height: auto;
   aspect-ratio: 4/3;
   margin: auto;
-  border: 1px solid red;
 }
 
 /* Ground */
