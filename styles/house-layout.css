@@ -7,6 +7,11 @@ body {
 
 h1 { color: #333; }
 
+.container{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
 .checklist {
   background: #fff;
   display: inline-block;
@@ -27,8 +32,10 @@ h1 { color: #333; }
 /* HOUSE CONTAINER */
 .house {
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 4/3;
   margin: auto;
   border: 1px solid red;
 }
@@ -48,7 +55,7 @@ h1 { color: #333; }
 .steps {
   position: absolute;
   justify-self: center;
-  bottom: 0.4vh;
+  bottom: 0;
   width: 50px;
   height: 15px;
   background: darkslategray;
@@ -60,8 +67,8 @@ h1 { color: #333; }
 /* Left wall */
 .left-wall {
   position: absolute;
-  margin-top: 16vh;
-  left: 1.1vw;
+  bottom: 0;
+  left: 65%;
   width: 100px;
   height: 150px;
   background: #fff;
@@ -74,24 +81,23 @@ h1 { color: #333; }
 /* Right wall */
 .right-wall {
   position: absolute;
-  margin-top: 16vh;
+  bottom: 0;
+  left: 14%;
   width: 100px;
-  left: 14.3vw;
   height: 150px;
   background: #fff;
   border: 2px solid #333;
   border-top: none;
   display: none;
   z-index: -1;
-  
 }
 
 /* Center wall with door */
 .center-wall {
   position: absolute;
   justify-self: center;
-  margin-top: 16vh;
-  width: 150px;
+  bottom: 0;
+  width: 151px;
   height: 150px;
   background: #fff;
   border: 2px solid #333;
@@ -101,20 +107,22 @@ h1 { color: #333; }
 }
 
 .center-wallr{
+    position: absolute;
     width: 0;
     height: 0;
     border-left: 77px solid transparent;
     border-right: 77px solid transparent;
     border-bottom: 45px solid white;
+    display: none;
     justify-self: center;
-    margin-top: 11.1vh;
+    top: 48%
 }
 
 /* Door */
 .door {
   position: absolute;
   justify-self: center;
-  margin-top: 10vh;
+  bottom: 4%;
   width: 29px;
   height: 45px;
   background: brown;
@@ -126,10 +134,10 @@ h1 { color: #333; }
 .roof-left {
   position: absolute;
   justify-self: center;
-  top: 10vh;
+  top: 45%;
   width: 395px;
   height: 100px;
-  background: #42c5f5;
+  background: #17a3d6;
   clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
   display: none;
   z-index: -1;
@@ -139,7 +147,7 @@ h1 { color: #333; }
 .roof-right {
   position: absolute;
   justify-self: center;
-  top: 7vh;
+  top: 38%;
   width: 200px;
   height: 200px;
   background: #87CEEB;;
@@ -152,15 +160,14 @@ h1 { color: #333; }
     0% 50%    /* left mid */
   );
   display: none;
-  z-index: 1;
+  z-index: 3;
 }
-
 
 /* Chimney */
 .chimney {
   position: absolute;
-  bottom: 200px;
-  left: 250px;
+  top: 40%;
+  left: 37%;
   width: 20px;
   height: 60px;
   background: #333;
@@ -180,19 +187,19 @@ h1 { color: #333; }
 }
 
 .window.left {
-  margin-top: 7vh;
-  left: 3vw;
+  bottom: 9%;
+  left: 21%;
 }
 
 .window.right {
-  margin-top: 7vh;
-  left: 16vw;
+  bottom: 9%;
+  right: 21%;
 }
 
 /* Top arched window */
 .top-window {
   position: absolute;
-  margin-top: -2vh;
+  bottom: 28%;
   justify-self: center;
   width: 50px;
   height: 40px;

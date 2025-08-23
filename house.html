@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles/house-layout.css">
   <script src="scripts/house.js" defer></script>
 </head>
+<div class="container">
  <h1>Customer Interaction Checklist</h1>
   <div class="checklist">
     <label><input type="checkbox" onchange="updateHouse()" data-part=".ground"> 1. Greet the customer warmly</label>
@@ -15,7 +16,7 @@
     <label><input type="checkbox" onchange="updateHouse()" data-part=".center-wall, .center-wallr"> 5. Thank the customer</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".door"> 6. Offer additional help</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-left"> 7. Be polite and positive</label>
-    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-right"> 8. Ask for feedback</label>
+    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-right, .roof-rightb"> 8. Ask for feedback</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".chimney"> 9. Close the interaction kindly</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".window.left, .window.right, .top-window"> 10. Record the interaction</label>
   </div>
@@ -30,10 +31,12 @@
     <div class="door"></div>
     <div class="roof-left"></div>
     <div class="roof-right"></div>
+    <div class="roof-rightb"></div>
     <div class="chimney"></div>
     <div class="window left"></div>
     <div class="window right"></div>
     <div class="top-window"></div>
   </div>
+</div>
 </body>
 </html>
