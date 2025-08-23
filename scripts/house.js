@@ -1,20 +1,13 @@
+ function updateHouse() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-function updateHouse() {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const parts = [
-document.querySelector('.foundation'),
-document.querySelector('.walls'),
-document.querySelector('.roof'),
-document.querySelector('.door'),
-document.querySelector('.window.left'),
-document.querySelector('.window.right')
-  ];
-
-  checkboxes.forEach((box, i) => {
-if (box.checked) {
-  parts[i].style.display = 'block';
-} else {
-  parts[i].style.display = 'none';
-}
-  });
-}
+      checkboxes.forEach(box => {
+        const selectors = box.dataset.part.split(',').map(s => s.trim());
+        selectors.forEach(selector => {
+          const element = document.querySelector(selector);
+          if (element) {
+            element.style.display = box.checked ? 'block' : 'none';
+          }
+        });
+      });
+    }

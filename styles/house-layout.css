@@ -1,97 +1,205 @@
 body {
-font-family: Arial, sans-serif;
-background: #f5f5f5;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px;
 }
 
-h1 {
-color: #333;
-}
+h1 { color: #333; }
 
 .checklist {
-background: #fff;
-padding: 20px;
-border-radius: 12px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-margin-bottom: 30px;
+  background: #fff;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .checklist label {
-display: block;
-margin: 10px 0;
-font-size: 18px;
-cursor: pointer;
+  display: block;
+  margin: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
 }
 
+/* HOUSE CONTAINER */
 .house {
-position: relative;
-width: 200px;
-height: 200px;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border: 1px solid red;
 }
 
-/* Foundation */
-.foundation {
-position: absolute;
-bottom: 0;
-width: 200px;
-height: 40px;
-background: #8B5E3C;
-display: none;
+/* Ground */
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #2f4f4f;
+  display: none;
 }
 
-/* Walls */
-.walls {
-position: absolute;
-bottom: 40px;
-width: 180px;
-height: 100px;
-left: 10px;
-background: #FFD580;
-display: none;
+/* Steps/Foundation */
+.steps {
+  position: absolute;
+  justify-self: center;
+  bottom: 0.4vh;
+  width: 50px;
+  height: 15px;
+  background: darkslategray;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+  display: none;
+  z-index: 2;
 }
 
-/* Roof */
-.roof {
-position: absolute;
-bottom: 140px;
-left: 0;
-width: 0;
-height: 0;
-border-left: 100px solid transparent;
-border-right: 100px solid transparent;
-border-bottom: 60px solid blue;
-display: none;
+/* Left wall */
+.left-wall {
+  position: absolute;
+  margin-top: 16vh;
+  left: 1.1vw;
+  width: 100px;
+  height: 150px;
+  background: #fff;
+  border: 2px solid #333;
+  border-top: none;
+  display: none;
+  z-index: -1;
+}
+
+/* Right wall */
+.right-wall {
+  position: absolute;
+  margin-top: 16vh;
+  width: 100px;
+  left: 14.3vw;
+  height: 150px;
+  background: #fff;
+  border: 2px solid #333;
+  border-top: none;
+  display: none;
+  z-index: -1;
+  
+}
+
+/* Center wall with door */
+.center-wall {
+  position: absolute;
+  justify-self: center;
+  margin-top: 16vh;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border: 2px solid #333;
+  border-top: none;
+  display: none;
+  z-index: 1;
+}
+
+.center-wallr{
+    width: 0;
+    height: 0;
+    border-left: 77px solid transparent;
+    border-right: 77px solid transparent;
+    border-bottom: 45px solid white;
+    justify-self: center;
+    margin-top: 11.1vh;
 }
 
 /* Door */
 .door {
-position: absolute;
-bottom: 40px;
-left: 90px;
-width: 30px;
-height: 60px;
-background: #654321;
-display: none;
+  position: absolute;
+  justify-self: center;
+  margin-top: 10vh;
+  width: 29px;
+  height: 45px;
+  background: brown;
+  display: none;
+  z-index: 1;
+}
+
+/* Roof left */
+.roof-left {
+  position: absolute;
+  justify-self: center;
+  top: 10vh;
+  width: 395px;
+  height: 100px;
+  background: #42c5f5;
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+  display: none;
+  z-index: -1;
+}
+
+/* Roof right */
+.roof-right {
+  position: absolute;
+  justify-self: center;
+  top: 7vh;
+  width: 200px;
+  height: 200px;
+  background: #87CEEB;;
+  clip-path: polygon(
+    50% 0,    /* top point */
+    100% 50%, /* right mid */
+    90% 60%,  /* inner right */
+    50% 20%,  /* inside top */
+    10% 60%,  /* inner left */
+    0% 50%    /* left mid */
+  );
+  display: none;
+  z-index: 1;
+}
+
+
+/* Chimney */
+.chimney {
+  position: absolute;
+  bottom: 200px;
+  left: 250px;
+  width: 20px;
+  height: 60px;
+  background: #333;
+  display: none;
 }
 
 /* Windows */
 .window {
-position: absolute;
-bottom: 80px;
-width: 30px;
-height: 30px;
-background: #87CEEB;
-border: 2px solid #333;
-display: none;
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background: #87CEEB;
+  border: 2px solid #333;
+  border-radius: 15px;
+  display: none;
+  z-index: 2;
 }
 
 .window.left {
-left: 40px;
+  margin-top: 7vh;
+  left: 3vw;
 }
 
 .window.right {
-right: 40px;
+  margin-top: 7vh;
+  left: 16vw;
+}
+
+/* Top arched window */
+.top-window {
+  position: absolute;
+  margin-top: -2vh;
+  justify-self: center;
+  width: 50px;
+  height: 40px;
+  background: #87CEEB;
+  border: 2px solid #333;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  display: none;
+  z-index: 2;
 }
