@@ -115,7 +115,7 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 14%;
-    width: 100px;
+    width: 101px;
     height: 150px;
     background: #fff;
     border: 2px solid #333;
@@ -215,9 +215,9 @@ h2 {
 .roof-shadow1 {
     position: absolute;
     justify-self: center;
-    top: 43%;
-    height: 175px;
-    width: 175px;
+    top: 42%;
+    height: 177px;
+    width: 177px;
     background: rgba(0,0,0,0.2);
     clip-path: polygon(
     50% 0,        /* top point */
