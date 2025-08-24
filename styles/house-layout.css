@@ -320,8 +320,15 @@ h2 {
 @media screen and (max-width: 600px) {
     body{
         min-height: 100vh;
-        min-width: 100ww;
+        min-width: 100vw;
+        overflow-x: hidden;
     }
+
+    *,
+    *::before,
+    *::after {
+    box-sizing: border-box;
+}
 
     h1{
         margin-top: 5%;
@@ -332,9 +339,13 @@ h2 {
         font-size: 1.3rem;
     }
     
-    .checklist{
-        margin: 2% 5%;
-    }
+    .checklist {
+    display: block;      /* block instead of inline-block */
+    width: 90%;          /* or 95% for small screens */
+    max-width: 400px;
+    margin: 2% auto;     /* center it */
+    padding: 20px;
+}
 
     .checklist label{
     font-size: 0.75rem;
