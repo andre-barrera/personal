@@ -227,7 +227,7 @@ h2 {
     10% 60%,    /* inner left */
     0% 50%        /* left mid */
     );
-        z-index: 3;
+    z-index: 3;
 }
 
 /* Chimney */
@@ -320,6 +320,7 @@ h2 {
 @media screen and (max-width: 600px) {
     body{
         min-height: 100vh;
+        min-width: 100ww;
     }
 
     h1{
@@ -336,8 +337,8 @@ h2 {
     }
 
     .checklist label{
-        font-size: 0.75rem;
-          display: flex;
+    font-size: 0.75rem;
+    display: flex;
     align-items: flex-start;  /* aligns the checkbox with the first line of text */
     gap: 10px;                /* space between checkbox and text */
     font-size: 16px;
