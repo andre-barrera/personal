@@ -330,6 +330,11 @@ h2 {
     box-sizing: border-box;
 }
 
+.house, .roof-left, .roof-right, .center-wall, .left-wall, .right-wall {
+    max-width: 100%;
+    width: 90%; /* scale with screen */
+}
+
     h1{
         margin-top: 5%;
         font-size: 2rem;
