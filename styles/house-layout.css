@@ -317,16 +317,129 @@ h2 {
     box-shadow: 0 4px 1px 1px rgba(7, 6, 58, 0.2);
 }
 
-@media screen and (max-width: 700px) {
-    body {
-    font-family: Arial, sans-serif;
-    background-image: url('../images/12439c03-31d6-4fbf-a566-ad1c87a2955c.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 20px;
-    margin: 0;
-    padding: 0;
-}
+@media screen and (max-width: 600px) {
+    body{
+        min-height: 100vh;
+    }
+
+    h1{
+        margin-top: 5%;
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+    
+    .checklist{
+        margin: 2% 5%;
+    }
+
+    .checklist label{
+        font-size: 0.75rem;
+          display: flex;
+    align-items: flex-start;  /* aligns the checkbox with the first line of text */
+    gap: 10px;                /* space between checkbox and text */
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    }
+
+    /* Steps/Foundation */
+    .steps {
+        z-index: 5;
+    }
+
+    /* Left wall */
+    .left-wall {
+        left: 70%;
+    }
+
+    /* Right wall */
+    .right-wall {
+        left: 2%;
+    }
+
+    /* Center wall with door */
+    .center-wall {
+        z-index: 4;
+    }
+
+    .center-wallr{
+            top: 30%;
+            z-index: 3;
+    }
+
+    /* Door */
+    .door {
+        z-index: 4;
+    }
+
+    /* Roof left */
+    .roof-left {
+        top: 25%;
+    }
+
+    .roof-shadowa{
+            left: 2%;
+            bottom: 36%;
+    }
+
+    .roof-shadowb{
+            right: 2%;
+            bottom: 36%;
+            z-index: 1;
+    }
+
+    /* Roof right */
+    .roof-right {
+        top: 17%;
+        z-index: 5;
+    }
+
+    .roof-shadow1 {
+        top: 22%;
+        height: 177px;
+        width: 177px;
+        z-index: 4;
+    }
+
+    /* Chimney */
+    .chimney {
+        top: 18%;
+        left: 35%;
+        z-index: 3;
+    }
+
+    /* Windows */
+
+    .window.left {
+        bottom: 9%;
+        left: 11%;
+    }
+
+    .window-bottom1{
+        width: 38px;
+        left: 10%;
+    }
+            
+    .window.right {
+    bottom: 9%;
+    right: 11%;
+    }
+
+    .window-bottom2{
+        width: 38px;
+        right: 10%;
+    }
+
+    /* Top arched window */
+    .top-window {
+        bottom: 33%;
+    }
+
+    .window-bottom3{
+        bottom: 30%;
+    }
 
 }
