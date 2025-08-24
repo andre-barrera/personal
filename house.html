@@ -6,8 +6,10 @@
   <link rel="stylesheet" href="styles/house-layout.css">
   <script src="scripts/house.js" defer></script>
 </head>
+<body>
 <div class="container">
  <h1>Checklist</h1>
+ <h2>Para um atendimento de Qualidade</h2>
   <div class="checklist">
     <label><input type="checkbox" onchange="updateHouse()" data-part=".ground"> 1. Seguiu com processo de regua de comunicação correto?</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".steps"> 2. Condução de atendimento com base no histórico</label>
@@ -16,10 +18,11 @@
     <label><input type="checkbox" onchange="updateHouse()" data-part=".right-wall"> 4. Teve Proatividade?</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".center-wall, .center-wallr"> 5. Segurança e Domínio?</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".door"> 6. Passou  todas as informações corretas e completas ao cliente.</label>
-    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-left"> 7. Não abandonou/encerrou a interação de maneira indevida</label>
-    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-right, .roof-rightb"> 8. Registro correto e completo</label>
+    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-left, .roof-shadowa, .roof-shadowb"> 7. Não abandonou/encerrou a interação de maneira indevida</label>
+    <label><input type="checkbox" onchange="updateHouse()" data-part=".roof-right, .roof-shadow1"> 8. Registro correto e completo</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".chimney"> 9. Usou a base do conhecimento no atendimento?</label>
-    <label><input type="checkbox" onchange="updateHouse()" data-part=".window.left, .window.right, .top-window"> 10. Enviou a pesquisa de satisfação?</label>
+    <label><input type="checkbox" onchange="updateHouse()" data-part=".window.left, .window.right, .top-window, .window-bottom1, .window-bottom2, .window-bottom3"> 
+        10. Enviou a pesquisa de satisfação?</label>
   </div>
 
   <div class="house">
@@ -31,12 +34,18 @@
     <div class="center-wallr"></div>
     <div class="door"></div>
     <div class="roof-left"></div>
+    <div class="roof-shadowa"></div>
+    <div class="roof-shadowb"></div>
     <div class="roof-right"></div>
-    <div class="roof-rightb"></div>
+    <div class="roof-shadow1"></div>
+    <div class="roof-shadow2"></div>
     <div class="chimney"></div>
     <div class="window left"></div>
+    <div class="window-bottom1"></div>
     <div class="window right"></div>
+    <div class="window-bottom2"></div>
     <div class="top-window"></div>
+    <div class="window-bottom3"></div>
   </div>
 </div>
 </body>

@@ -1,223 +1,332 @@
 body {
-  font-family: Arial, sans-serif;
-  background-image: url('../images/12439c03-31d6-4fbf-a566-ad1c87a2955c.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  padding: 20px;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/12439c03-31d6-4fbf-a566-ad1c87a2955c.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 { 
-  color: white;
-  font-size: 300%;
+    color: white;
+    font-size: 300%;
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+h2 {
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 3%;
 }
 
 .container{
-  max-width: 95%;
-  margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    container: 0;
+
 }
 
 .checklist {
-  background-color: rgba(255,255,255,0.4);
-  display: inline-block;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-  text-align: left;
+    background-color: rgba(255,255,255,0.4);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .checklist label {
-  display: block;
-  margin: 8px 0;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
 }
 
 /* House container */
 .house { 
-    position: relative; 
-    width: 90%; 
-    max-width: 500px; 
-    height: auto; 
-    aspect-ratio: 4/3; 
-    margin: auto;
+        position: relative; 
+        width: 90%; 
+        max-width: 500px;
+        height: auto; 
+        aspect-ratio: 4/3; 
+        margin: auto;
+        margin-bottom: 0;
 }
 
 
 /* HOUSE CONTAINER */
 .house div {
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 /* When visible */
 .house div.visible {
-  opacity: 1;
-  transform: translateY(0);
-  max-width: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    max-width: 500px;
 }
 
 
 /* Ground */
 .ground {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background: #2f4f4f;
-  justify-self: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: #2f4f4f;
+    justify-self: center;
 }
 
 /* Steps/Foundation */
 .steps {
-  position: absolute;
-  justify-self: center;
-  bottom: 0;
-  width: 50px;
-  height: 15px;
-  background: darkslategray;
-  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
-  z-index: 2;
+    position: absolute;
+    justify-self: center;
+    bottom: 0;
+    width: 50px;
+    height: 15px;
+    background: darkslategray;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+    z-index: 4;
 }
 
 /* Left wall */
 .left-wall {
-  position: absolute;
-  bottom: 0;
-  left: 65%;
-  width: 100px;
-  height: 150px;
-  background: #fff;
-  border: 2px solid #333;
-  border-top: none;
-  z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 65%;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 2px solid #333;
+    border-top: none;
+    z-index: -1;
 }
 
 /* Right wall */
 .right-wall {
-  position: absolute;
-  bottom: 0;
-  left: 14%;
-  width: 100px;
-  height: 150px;
-  background: #fff;
-  border: 2px solid #333;
-  border-top: none;
-  z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 14%;
+    width: 100px;
+    height: 150px;
+    background: #fff;
+    border: 2px solid #333;
+    border-top: none;
+    z-index: -1;
 }
 
 /* Center wall with door */
 .center-wall {
-  position: absolute;
-  justify-self: center;
-  bottom: 0;
-  width: 151px;
-  height: 150px;
-  background: #fff;
-  border: 2px solid #333;
-  border-top: none;
-  z-index: 1;
+    position: absolute;
+    justify-self: center;
+    bottom: 0;
+    width: 151px;
+    height: 150px;
+    background: #fff;
+    border: 2px solid #333;
+    border-top: none;
+    z-index: 3;
 }
 
 .center-wallr{
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 77px solid transparent;
-    border-right: 77px solid transparent;
-    border-bottom: 45px solid white;
-    justify-self: center;
-    top: 48%
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 77px solid transparent;
+        border-right: 77px solid transparent;
+        border-bottom: 45px solid white;
+        justify-self: center;
+        top: 48%;
+        z-index: 3;
 }
 
 /* Door */
 .door {
-  position: absolute;
-  justify-self: center;
-  bottom: 4%;
-  width: 29px;
-  height: 45px;
-  background: brown;
-  z-index: 1;
+    position: absolute;
+    justify-self: center;
+    bottom: 4%;
+    width: 29px;
+    height: 45px;
+    background: brown;
+    z-index: 3;
 }
 
 /* Roof left */
 .roof-left {
-  position: absolute;
-  justify-self: center;
-  top: 45%;
-  width: 395px;
-  height: 100px;
-  background: #17a3d6;
-  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
-  z-index: -1;
+    position: absolute;
+    justify-self: center;
+    top: 45%;
+    width: 395px;
+    height: 100px;
+    background: #17a3d6;
+    clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.roof-shadowa{
+        position: absolute;
+        width: 102px;
+        height: 10px;
+        background-color: rgba(0,0,0,0.2);
+        z-index: 10;
+        left: 14%;
+        bottom: 26%;
+        z-index: 1;
+}
+
+.roof-shadowb{
+        position: absolute;
+        width: 102px;
+        height: 10px;
+        background-color: rgba(0,0,0,0.2);
+        z-index: 10;
+        right: 14%;
+        bottom: 26%;
+        z-index: 1;
 }
 
 /* Roof right */
 .roof-right {
-  position: absolute;
-  justify-self: center;
-  top: 38%;
-  width: 200px;
-  height: 200px;
-  background: #87CEEB;;
-  clip-path: polygon(
-    50% 0,    /* top point */
+    position: absolute;
+    justify-self: center;
+    top: 38%;
+    width: 200px;
+    height: 200px;
+    background: #87CEEB;;
+    clip-path: polygon(
+        50% 0,        /* top point */
+        100% 50%, /* right mid */
+        90% 60%,    /* inner right */
+        50% 20%,    /* inside top */
+        10% 60%,    /* inner left */
+        0% 50%        /* left mid */
+    );
+    z-index: 4;
+}
+
+.roof-shadow1 {
+    position: absolute;
+    justify-self: center;
+    top: 43%;
+    height: 175px;
+    width: 175px;
+    background: rgba(0,0,0,0.2);
+    clip-path: polygon(
+    50% 0,        /* top point */
     100% 50%, /* right mid */
-    90% 60%,  /* inner right */
-    50% 20%,  /* inside top */
-    10% 60%,  /* inner left */
-    0% 50%    /* left mid */
-  );
-  z-index: 3;
+    90% 60%,    /* inner right */
+    50% 20%,    /* inside top */
+    10% 60%,    /* inner left */
+    0% 50%        /* left mid */
+    );
+        z-index: 3;
 }
 
 /* Chimney */
 .chimney {
-  position: absolute;
-  top: 40%;
-  left: 37%;
-  width: 20px;
-  height: 60px;
-  background: #333;
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    width: 20px;
+    height: 60px;
+    background: #333;
+    border-top: 3px solid #cb4047;
+    z-index: 2;
 }
 
 /* Windows */
 .window {
-  position: absolute;
-  width: 30px;
-  height: 50px;
-  background: #87CEEB;
-  border: 2px solid #333;
-  border-radius: 15px;
-  z-index: 2;
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: #87CEEB;
+    border: 2px solid #333;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 4;
 }
 
 .window.left {
-  bottom: 9%;
-  left: 21%;
+    bottom: 9%;
+    left: 21%;
 }
 
+.window-bottom1{
+    position: absolute;
+    width: 41px;
+    height: 10px;
+    background: rgb(107, 127, 171);
+    border-radius: 15px;
+    bottom: 8%;
+    left: 20%;
+    z-index: 5;
+    border: 1px solid black;
+    box-shadow: 0 4px 1px 0.5px rgba(7, 6, 58, 0.2);
+}
+        
 .window.right {
-  bottom: 9%;
-  right: 21%;
+   bottom: 9%;
+   right: 21%;
+}
+
+.window-bottom2{
+    position: absolute;
+    width: 41px;
+    height: 10px;
+    background: rgb(107, 127, 171);
+    border-radius: 15px;
+    bottom: 8%;
+    right: 20%;
+    z-index: 5;
+    border: 1px solid black;
+    box-shadow: 0 4px 1px 1px rgba(7, 6, 58, 0.2);
 }
 
 /* Top arched window */
 .top-window {
-  position: absolute;
-  bottom: 28%;
-  justify-self: center;
-  width: 50px;
-  height: 40px;
-  background: #87CEEB;
-  border: 2px solid #333;
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  z-index: 2;
+    position: absolute;
+    bottom: 26%;
+    justify-self: center;
+    width: 50px;
+    height: 45px;
+    background: #87CEEB;
+    border: 2px solid #333;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    z-index: 4;
+}
+
+.window-bottom3{
+    position: absolute;
+    width: 60px;
+    height: 10px;
+    background: rgb(107, 127, 171);
+    border-radius: 15px;
+    bottom: 24%;
+    justify-self: center;
+    z-index: 5;
+    border: 1px solid black;
+    box-shadow: 0 4px 1px 1px rgba(7, 6, 58, 0.2);
+}
+
+@media screen and (max-width: 700px) {
+    body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/12439c03-31d6-4fbf-a566-ad1c87a2955c.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+}
+
 }
