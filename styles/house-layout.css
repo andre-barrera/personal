@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
     text-align: center;
     padding: 20px;
-    margin: 0;
+    margin: 0 ;
     padding: 0;
 }
 
@@ -48,15 +48,71 @@ h2 {
 }
 
 /* House container */
-.house { 
-        position: relative; 
+.house {
+        grid-column: 2;
+        position: relative;
         width: 90%; 
         max-width: 500px;
         height: auto; 
         aspect-ratio: 4/3; 
-        margin: auto;
-        margin-bottom: 0;
+        justify-self: center;
+        margin: 0 auto;
+        bottom: 20%;
 }
+
+.scene {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  position: relative;   /* important: so children can use absolute */
+  min-height: 400px;    /* give it some height, otherwise "bottom" = no space */
+}
+
+.cartoon-wrapper {
+  position: absolute;
+  right: 7%;
+  bottom: 23%;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; /* cartoon always anchors right */
+  z-index: 20;
+}
+
+
+.cartoon {
+  width: 200px;
+  height: auto;
+  position: relative; /* remove absolute! let flexbox handle it */
+  top: 5%;
+}
+
+
+.speech-bubble {
+  background: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 220px;
+  font-size: 14px;
+  line-height: 1.3;
+  text-align: center;
+  display: none; /* hidden until used */
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: 100%;   /* bottom of bubble */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
 
 
 /* HOUSE CONTAINER */
@@ -166,7 +222,7 @@ h2 {
     top: 45%;
     width: 395px;
     height: 100px;
-    background: #17a3d6;
+    background: brown;
     clip-path: polygon(8% 0, 92% 0, 100% 100%, 0% 100%);
     z-index: 2;
 }
@@ -200,7 +256,7 @@ h2 {
     top: 38%;
     width: 200px;
     height: 200px;
-    background: #87CEEB;;
+    background: rgb(111, 26, 26);
     clip-path: polygon(
         50% 0,        /* top point */
         100% 50%, /* right mid */
@@ -317,146 +373,5 @@ h2 {
     box-shadow: 0 4px 1px 1px rgba(7, 6, 58, 0.2);
 }
 
-@media screen and (max-width: 600px) {
-    body{
-        min-height: 100vh;
-        min-width: 100vw;
-        overflow-x: hidden;
-    }
 
-    *,
-    *::before,
-    *::after {
-    box-sizing: border-box;
-}
 
-.house, .roof-left, .roof-right, .center-wall, .left-wall, .right-wall {
-    max-width: 100%;
-    width: 90%; /* scale with screen */
-}
-
-    h1{
-        margin-top: 5%;
-        font-size: 2rem;
-    }
-
-    h2{
-        font-size: 1.3rem;
-    }
-    
-    .checklist {
-    display: block;      /* block instead of inline-block */
-    width: 90%;          /* or 95% for small screens */
-    max-width: 400px;
-    margin: 2% auto;     /* center it */
-    padding: 20px;
-}
-
-    .checklist label{
-    font-size: 0.75rem;
-    display: flex;
-    align-items: flex-start;  /* aligns the checkbox with the first line of text */
-    gap: 10px;                /* space between checkbox and text */
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    }
-
-    /* Steps/Foundation */
-    .steps {
-        z-index: 5;
-    }
-
-    /* Left wall */
-    .left-wall {
-        left: 70%;
-    }
-
-    /* Right wall */
-    .right-wall {
-        left: 2%;
-    }
-
-    /* Center wall with door */
-    .center-wall {
-        z-index: 4;
-    }
-
-    .center-wallr{
-            top: 30%;
-            z-index: 3;
-    }
-
-    /* Door */
-    .door {
-        z-index: 4;
-    }
-
-    /* Roof left */
-    .roof-left {
-        top: 25%;
-    }
-
-    .roof-shadowa{
-            left: 2%;
-            bottom: 36%;
-    }
-
-    .roof-shadowb{
-            right: 2%;
-            bottom: 36%;
-            z-index: 1;
-    }
-
-    /* Roof right */
-    .roof-right {
-        top: 17%;
-        z-index: 5;
-    }
-
-    .roof-shadow1 {
-        top: 22%;
-        height: 177px;
-        width: 177px;
-        z-index: 4;
-    }
-
-    /* Chimney */
-    .chimney {
-        top: 18%;
-        left: 35%;
-        z-index: 3;
-    }
-
-    /* Windows */
-
-    .window.left {
-        bottom: 9%;
-        left: 11%;
-    }
-
-    .window-bottom1{
-        width: 38px;
-        left: 10%;
-    }
-            
-    .window.right {
-    bottom: 9%;
-    right: 11%;
-    }
-
-    .window-bottom2{
-        width: 38px;
-        right: 10%;
-    }
-
-    /* Top arched window */
-    .top-window {
-        bottom: 33%;
-    }
-
-    .window-bottom3{
-        bottom: 30%;
-    }
-
-}

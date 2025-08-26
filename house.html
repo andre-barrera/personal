@@ -5,12 +5,14 @@
   <title>Customer Interaction Checklist</title>
   <link rel="stylesheet" href="styles/house-layout.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="scripts/house.js" defer></script>
 </head>
 <body>
 <div class="container">
  <h1>Checklist</h1>
  <h2>Para um atendimento de Qualidade</h2>
+
   <div class="checklist">
     <label><input type="checkbox" onchange="updateHouse()" data-part=".ground"> 1. Seguiu com processo de regua de comunicação correto?</label>
     <label><input type="checkbox" onchange="updateHouse()" data-part=".steps"> 2. Condução de atendimento com base no histórico</label>
@@ -26,28 +28,38 @@
         10. Enviou a pesquisa de satisfação?</label>
   </div>
 
-  <div class="house">
-    <div class="ground"></div>
-    <div class="steps"></div>
-    <div class="left-wall"></div>
-    <div class="right-wall"></div>
-    <div class="center-wall"></div>
-    <div class="center-wallr"></div>
-    <div class="door"></div>
-    <div class="roof-left"></div>
-    <div class="roof-shadowa"></div>
-    <div class="roof-shadowb"></div>
-    <div class="roof-right"></div>
-    <div class="roof-shadow1"></div>
-    <div class="roof-shadow2"></div>
-    <div class="chimney"></div>
-    <div class="window left"></div>
-    <div class="window-bottom1"></div>
-    <div class="window right"></div>
-    <div class="window-bottom2"></div>
-    <div class="top-window"></div>
-    <div class="window-bottom3"></div>
+  <!-- house + cartoon together -->
+  <div class="scene">
+    <div class="house">
+      <div class="ground"></div>
+      <div class="steps"></div>
+      <div class="left-wall"></div>
+      <div class="right-wall"></div>
+      <div class="center-wall"></div>
+      <div class="center-wallr"></div>
+      <div class="door"></div>
+      <div class="roof-left"></div>
+      <div class="roof-shadowa"></div>
+      <div class="roof-shadowb"></div>
+      <div class="roof-right"></div>
+      <div class="roof-shadow1"></div>
+      <div class="roof-shadow2"></div>
+      <div class="chimney"></div>
+      <div class="window left"></div>
+      <div class="window-bottom1"></div>
+      <div class="window right"></div>
+      <div class="window-bottom2"></div>
+      <div class="top-window"></div>
+      <div class="window-bottom3"></div>
+    </div>
+<!-- cartoon with bubble -->
+  <div class="cartoon-wrapper">
+    <div class="speech-bubble" id="hintBubble"></div>
+    <img src="images/cartoon.webp" alt="cartoon image" class="cartoon">
   </div>
+
 </div>
+
+<div class="empty"></div>
 </body>
 </html>
